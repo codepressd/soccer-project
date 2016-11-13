@@ -7,3 +7,11 @@ cache:
     - node_modules
 script:
   - npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: cDfA4VtWK16efps7zrINITA5/KC8im0dEDPdM4dwfvKDfNeybky4aGgpK6vxnzIDu/UVy3MSH/DmKB/3KA3gmAlNMC0O1X3lOnzvY7mi7GTxCrZHqN/jfqxsc4GBWJS1x+XS/gYHKpEuY9P+Ok2kFkWafMwhrD/DvmKl7OfzrcF3Gnd7xKebDU/g2WLrsNdD4f0lLZp1NXbxJanh9WvUBnPq0LL9xk7bV/LQ/PD/5QJ0Uqs1lHgbGeW37Ushff4wvREGmBBlS4gX1j0KeQ8q2C+lU+6YICzYuuXLHiicHSyzhqOcTRfTRQ0SFGuW2eUgfeRvCQRf3ilkMKLpd4uUIiXCDg5uyLdsLBEsw6Yzb50yDxD/Ih1Jv/PYLMNqaeStaxWC+DOhsePJLWYUkN+pns+t5w0ZWROvG1kxsLdEMRY5xobs8sfveC65rBSgHR1BJ3oIpEP9EjR2cntbZXU9ma8UxJ1o5rh6PFWT7kZoBIjxTX0uT6Y7Am1KE+Cw9h7GlvxSpgN34I6A6kbd19I+6xcWCKABd6yJ0A57i19ED/vJBdB8dzC8+aiM/ndjpadcOXO5VNtkmdL6RPBwzKer6dHITDLD4gXNw6zYc38oOwF8tROFNMLsdhIGMF1nom4y0hn2TqOWnUWjmzEvjXzYwtB9eA7yyn31nElc+7jvRg4=
+  app:  gentle-hamlet-29844
+  on:
+    repo: codepressd/soccer-project
+    
