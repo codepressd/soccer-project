@@ -12,7 +12,7 @@ class LeagueView extends React.Component {
 	render() {
 		
 		return (
-			<div>
+			<div className="divWrap">
 			<h1>Choose A League</h1>
 				<div className="the-grid">
 				

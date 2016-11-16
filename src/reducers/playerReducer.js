@@ -1,5 +1,5 @@
 export default(state =[], action) =>{
-
+	
 	switch(action.type){
 		
 		case 'FETCH_PLAYERS_SUCCESS':

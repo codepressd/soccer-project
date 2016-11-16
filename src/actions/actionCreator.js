@@ -1,14 +1,6 @@
 import Axios from 'axios';
 
 
-// export const setPathId =(pathId) =>{
-	
-// 	return{
-// 		type:'SET_PATH_ID',
-// 		pathId
-// 	}
-// }
-
 //get League Data
 export const fetchDataSuccess = (leagues) => {
 
@@ -27,9 +19,10 @@ export const fetchDataError = (error) => {
 }
 
 export const getLeagueData = (apiUrl) => {
+	const crossUrl = 'https://crossorigin.me/'+apiUrl;
 	return (dispatch) => {
 
-		return Axios.get(apiUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
+		return Axios.get(crossUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
 			.then(response => {
 				dispatch(fetchDataSuccess(response.data));
 			})
@@ -58,9 +51,10 @@ export const fetchTeamError = (error) => {
 }
 
 export const getTeamData = (apiUrl) => {
+	const crossUrl = 'https://crossorigin.me/'+apiUrl;
 	return (dispatch) => {
 
-		return Axios.get(apiUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
+		return Axios.get(crossUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
 			.then(response => {
 				dispatch(fetchTeamSuccess(response.data));
 			})
@@ -89,9 +83,10 @@ export const fetchTeamPlayersError = (error) => {
 }
 
 export const getTeamPlayersData = (apiUrl) => {
+	const crossUrl = 'https://crossorigin.me/'+apiUrl;
 	return (dispatch) => {
 
-		return Axios.get(apiUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
+		return Axios.get(crossUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
 			.then(response => {
 				dispatch(fetchTeamPlayersSuccess(response.data));
 			})
@@ -120,9 +115,10 @@ export const fetchLeagueTableError = (error) => {
 }
 
 export const getLeagueTableData = (apiUrl) => {
+	const crossUrl = 'https://crossorigin.me/'+apiUrl;
 	return (dispatch) => {
 
-		return Axios.get(apiUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
+		return Axios.get(crossUrl, {headers: {'X-Auth-Token': '6620bdec3539427c85f61b4b788e5206'}})
 			.then(response => {
 				dispatch(fetchLeagueTableSuccess(response.data));
 			})
