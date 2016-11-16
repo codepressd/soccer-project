@@ -1,44 +1,30 @@
-import { createStore, compose, applyMiddleware } from 'redux';
-import { syncHistoryWithStore } from 'react-router-redux';
+import { createStore, compose, combineReducers, applyMiddleware } from 'redux';
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import { browserHistory } from 'react-router';
+import { autoRehydrate } from 'redux-persist';
 import thunk from 'redux-thunk';
-//Import actions
 
+import {reduxReactFirebase, getFirebase} from 'react-redux-firebase';
+
+//Import actions
 import * as soccerActions from '../actions/actionCreator';
 
-
-//Import Root reducer
-
+//import root reducer
 import rootReducer from '../reducers/index';
 
-
-var listOfLeagues =[];
-var leagueTable = {
-	standing:[]
-};
-var team = {
-	teams:[]
-};
-var players = {
-	players: []
-};
-
-
-
 //default state
+import defaultState from './defaultState';
 
-const defaultState= {
-	
-	listOfLeagues,
-	leagueTable,
-	team,
-	players
-}
 
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(rootReducer,  defaultState, composeEnhancers(applyMiddleware(thunk)));
+const enhancer = composeEnhancers(
+	applyMiddleware(thunk),
+	autoRehydrate()
+	);
 
+let store = createStore(rootReducer,  defaultState, enhancer);
+ 
 export const history = syncHistoryWithStore(browserHistory, store);
 
  export default store;

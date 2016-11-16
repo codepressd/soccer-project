@@ -11,17 +11,20 @@ class TeamsView extends React.Component {
 	}
 
 	getActiveLeague(){
+		
 		var index = this.props.listOfLeagues.findIndex((leagues) => leagues.league === this.props.params.compId);
 	
 		var activeLeague = this.props.listOfLeagues[index];
 		return activeLeague;
 	}
 
-	componentDidMount(){
-		const actLeague = this.getActiveLeague();
+
+	componentWillMount(){
 		
+		const actLeague = this.getActiveLeague();
 		const apiUrl = 'http://api.football-data.org/v1/competitions/'+actLeague.id+'/teams';
 		this.props.getTeamData(apiUrl);
+
 
 	}
 

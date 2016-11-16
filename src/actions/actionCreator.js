@@ -1,5 +1,13 @@
 import Axios from 'axios';
-//async call
+
+
+// export const setPathId =(pathId) =>{
+	
+// 	return{
+// 		type:'SET_PATH_ID',
+// 		pathId
+// 	}
+// }
 
 //get League Data
 export const fetchDataSuccess = (leagues) => {

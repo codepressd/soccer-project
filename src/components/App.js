@@ -9,6 +9,7 @@ function mapStateToProps(state){
 		team: state.team,
 		listOfLeagues: state.listOfLeagues,
 		leagueTable: state.leagueTable,
+		pathId: state.pathId,
 		players: state.players
 	}
 }
