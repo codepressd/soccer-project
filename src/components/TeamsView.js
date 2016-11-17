@@ -22,7 +22,7 @@ class TeamsView extends React.Component {
 	componentWillMount(){
 		
 		const actLeague = this.getActiveLeague();
-		const apiUrl = 'http://api.football-data.org/v1/competitions/'+actLeague.id+'/teams';
+		const apiUrl = 'https://api.football-data.org/v1/competitions/'+actLeague.id+'/teams';
 		this.props.getTeamData(apiUrl);
 
 

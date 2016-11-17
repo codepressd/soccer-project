@@ -20,7 +20,7 @@ class LeagueTableView extends React.Component {
 	componentDidMount(){
 		const actLeagueTable = this.getActiveLeagueTable();
 		
-		const apiUrl = 'http://api.football-data.org/v1/competitions/'+actLeagueTable.id+'/leagueTable';
+		const apiUrl = 'https://api.football-data.org/v1/competitions/'+actLeagueTable.id+'/leagueTable';
 		this.props.getLeagueTableData(apiUrl);
 
 	}

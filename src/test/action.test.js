@@ -14,7 +14,7 @@ describe('Test All  Actions', () => {
 
 	it('creates FETCH_DATA_SUCCESS when fetching getLeagueData', (done) => {
 		mock
-			.onGet('http://api.football-data.org/v1/competitions/?season=2016')
+			.onGet('https://api.football-data.org/v1/competitions/?season=2016')
 			.reply(200, [])
 
 		const expectedActions =[
@@ -25,7 +25,7 @@ describe('Test All  Actions', () => {
 
 		 const store = mockStore({ leagues: [] });
 
-		 return store.dispatch(actions.getLeagueData('http://api.football-data.org/v1/competitions/?season=2016'))
+		 return store.dispatch(actions.getLeagueData('https://api.football-data.org/v1/competitions/?season=2016'))
       			.then(() => { // return of async actions
         			expect(store.getActions()).toEqual(expectedActions);
         			done();
@@ -48,7 +48,7 @@ describe('Test All  Actions', () => {
 
 	it('creates FETCH_TEAM_SUCCESS when fetching getLeagueData', (done) => {
 		mock
-			.onGet('http://api.football-data.org/v1/competitions/PL/teams')
+			.onGet('https://api.football-data.org/v1/competitions/PL/teams')
 			.reply(200, [])
 
 		const expectedActions =[
@@ -59,7 +59,7 @@ describe('Test All  Actions', () => {
 
 		 const store = mockStore({ teams: [] });
 
-		 return store.dispatch(actions.getTeamData('http://api.football-data.org/v1/competitions/PL/teams'))
+		 return store.dispatch(actions.getTeamData('https://api.football-data.org/v1/competitions/PL/teams'))
       			.then(() => { // return of async actions
         			expect(store.getActions()).toEqual(expectedActions);
         			done();
@@ -82,7 +82,7 @@ describe('Test All  Actions', () => {
 
 	it('creates FETCH_PLAYERS_SUCCESS when fetching getLeagueData', (done) => {
 		mock
-			.onGet('http://api.football-data.org/v1/teams/322/players')
+			.onGet('https://api.football-data.org/v1/teams/322/players')
 			.reply(200, [])
 
 		const expectedActions =[
@@ -93,7 +93,7 @@ describe('Test All  Actions', () => {
 
 		 const store = mockStore({ players: [] });
 
-		 return store.dispatch(actions.getTeamPlayersData('http://api.football-data.org/v1/teams/322/players'))
+		 return store.dispatch(actions.getTeamPlayersData('https://api.football-data.org/v1/teams/322/players'))
       			.then(() => { // return of async actions
         			expect(store.getActions()).toEqual(expectedActions);
         			done();
@@ -115,7 +115,7 @@ describe('Test All  Actions', () => {
 
 	it('creates FETCH_LEAGUE_TABLE_SUCCESS when fetching getLeagueData', (done) => {
 		mock
-			.onGet('http://api.football-data.org/v1/competitions/PL/leagueTable')
+			.onGet('https://api.football-data.org/v1/competitions/PL/leagueTable')
 			.reply(200, [])
 
 		const expectedActions =[
@@ -126,7 +126,7 @@ describe('Test All  Actions', () => {
 
 		 const store = mockStore({ tables: [] });
 
-		 return store.dispatch(actions.getLeagueTableData('http://api.football-data.org/v1/competitions/PL/leagueTable'))
+		 return store.dispatch(actions.getLeagueTableData('https://api.football-data.org/v1/competitions/PL/leagueTable'))
       			.then(() => { // return of async actions
         			expect(store.getActions()).toEqual(expectedActions);
         			done();

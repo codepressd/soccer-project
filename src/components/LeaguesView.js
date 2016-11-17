@@ -5,7 +5,7 @@ import LeagueList from './LeagueList';
 class LeagueView extends React.Component {
 
 	componentDidMount(){
-		const apiUrl = 'http://api.football-data.org/v1/competitions/?season=2016';
+		const apiUrl = 'https://api.football-data.org/v1/competitions/?season=2016';
 		this.props.getLeagueData(apiUrl);
 	}
 
