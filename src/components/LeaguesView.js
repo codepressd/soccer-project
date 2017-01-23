@@ -13,6 +13,8 @@ class LeagueView extends React.Component {
 		
 		return (
 			<div className="divWrap">
+			<h3>Soccerly is an easy way to stay on top of the standings and players European Soccer Leagues. Below is a list of leagues, pick one and explore the teams and players of that league!</h3>
+			<h3>Have Fun!</h3>
 			<h1>Choose A League</h1>
 				<div className="the-grid">
 				

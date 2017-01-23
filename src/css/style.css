@@ -50,6 +50,9 @@ header.top h1 {
 .divWrap{
   padding: 1em;
 }
+.divWrap h3{
+  line-height: 40px;
+}
 .noData{
   text-align: center;
   padding: 1em;
