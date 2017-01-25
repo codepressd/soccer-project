@@ -11,13 +11,13 @@ I found a free api which was nice, since the majority you have to pay for. Due t
 
 ## Technologies Used
 
-React 
-Redux 
-Bootstrap
-Html
-CSS
-Javascript
-Firebase
+- React 
+- Redux 
+- Bootstrap
+- Html
+- CSS
+- Javascript
+- Firebase
 
 ### Want to work on...
 
